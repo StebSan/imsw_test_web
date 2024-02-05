@@ -1,0 +1,30 @@
+<div class="card border-1	border-300">
+  <p-table [value]="users" [tableStyle]="{ 'min-width': '50rem' }">
+      <ng-template pTemplate="header">
+          <tr class="text-center">
+              <th>Creado</th>
+              <th>Nombre</th>
+              <th>Email</th>
+              <th>Edad</th>
+          </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-user>
+          <tr class="text-center">
+              <td>{{ user.createdAt | date:'medium' }}</td>
+              <td>{{ user.name }}</td>
+              <td>{{ user.email }}</td>
+              <td>{{ user.yearsOld }}</td>
+          </tr>
+      </ng-template>
+  </p-table>
+</div>
+<div class="mt-5 mx-5 grid">
+  <div class="col-12">
+    <p-paginator
+      [rows]="limit"
+      [totalRecords]="totalItems"
+      [rowsPerPageOptions]="rowsPerPageOptions"
+      (onPageChange)="paginate($event)">
+    </p-paginator>
+  </div>
+</div>

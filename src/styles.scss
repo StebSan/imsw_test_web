@@ -1,1 +1,24 @@
-/* You can add global styles to this file, and also import other style files */
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+
+@import 'node_modules/primeflex/primeflex.css';
+@import "primeicons/primeicons.css";
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 90vh;
+  align-items: center;
+}
+
+.content-wrap {
+  display: flex;
+  justify-content: center;
+  margin: 50px;
+  flex: 1;
+  width: 80%;
+}
+
+footer {
+
+}
